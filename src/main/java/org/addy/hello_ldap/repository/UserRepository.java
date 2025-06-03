@@ -20,7 +20,6 @@ import static org.springframework.ldap.query.LdapQueryBuilder.query;
 @RequiredArgsConstructor
 @Repository
 public class UserRepository {
-
     private final LdapTemplate ldapTemplate;
     private final UserAttributesMapper userAttributesMapper;
 

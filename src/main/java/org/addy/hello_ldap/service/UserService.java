@@ -19,7 +19,6 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Service
 public class UserService implements UserDetailsService {
-
     private final UserRepository userRepository;
     private final GroupRepository groupRepository;
 

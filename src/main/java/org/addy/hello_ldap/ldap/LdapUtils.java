@@ -10,7 +10,6 @@ import javax.naming.directory.Attributes;
 @Slf4j
 @UtilityClass
 public class LdapUtils {
-
     public void dumpAttributes(Attributes attributes) throws NamingException {
         log.info("---------- Dumping atttributes ----------");
 

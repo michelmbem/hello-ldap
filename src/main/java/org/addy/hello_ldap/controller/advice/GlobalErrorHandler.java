@@ -28,7 +28,6 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestControllerAdvice
 public class GlobalErrorHandler {
-
     private static final String LOG_MSG_TEMPLATE =
             "An exception of type {} was raised while requesting {} {}";
 

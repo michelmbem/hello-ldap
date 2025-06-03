@@ -12,7 +12,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class GroupService {
-
     private final GroupRepository groupRepository;
 
     public List<Group> findAll() {

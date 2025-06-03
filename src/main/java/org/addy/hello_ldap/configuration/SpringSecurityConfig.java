@@ -23,7 +23,6 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 @EnableMethodSecurity
 @EnableConfigurationProperties({AuthTokenProperties.class})
 public class SpringSecurityConfig {
-
     private static final String[] SECURITY_WHITELIST = {
             "/auth/**",
     };
@@ -34,6 +33,7 @@ public class SpringSecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
+                .httpBasic(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req -> req
                         .requestMatchers(SECURITY_WHITELIST).permitAll()
                         .anyRequest().authenticated())

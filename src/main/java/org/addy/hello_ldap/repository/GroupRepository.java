@@ -18,7 +18,6 @@ import static org.springframework.ldap.query.LdapQueryBuilder.query;
 @RequiredArgsConstructor
 @Repository
 public class GroupRepository {
-
     private final LdapTemplate ldapTemplate;
     private final GroupAttributesMapper groupAttributesMapper;
 

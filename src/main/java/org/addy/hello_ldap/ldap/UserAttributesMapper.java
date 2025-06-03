@@ -13,7 +13,6 @@ import static org.addy.hello_ldap.ldap.LdapUtils.*;
 @Slf4j
 @Component
 public class UserAttributesMapper implements AttributesMapper<User> {
-
     @Override
     public User mapFromAttributes(Attributes attributes) throws NamingException {
         dumpAttributes(attributes);

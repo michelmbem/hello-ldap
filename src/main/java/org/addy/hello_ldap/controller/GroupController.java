@@ -16,7 +16,6 @@ import java.util.List;
 @RestController
 @RequestMapping("group")
 public class GroupController {
-
     private final GroupService groupService;
 
     @GetMapping
@@ -28,5 +27,4 @@ public class GroupController {
     public Group getByName(@PathVariable String name) {
         return groupService.findByName(name);
     }
-
 }

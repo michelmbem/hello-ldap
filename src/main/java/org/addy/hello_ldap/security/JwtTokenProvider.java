@@ -19,7 +19,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Component
 public class JwtTokenProvider {
-
     private static final String AUTH_HEADER_NAME = "Authorization";
     private static final String TOKEN_PREFIX = "Bearer ";
 
@@ -44,10 +43,9 @@ public class JwtTokenProvider {
     public String resolveToken(HttpServletRequest req) {
         String bearerToken = req.getHeader(AUTH_HEADER_NAME);
 
-        if (bearerToken != null && bearerToken.startsWith(TOKEN_PREFIX))
-            return bearerToken.substring(TOKEN_PREFIX.length());
-
-        return null;
+        return bearerToken != null && bearerToken.startsWith(TOKEN_PREFIX)
+                ? bearerToken.substring(TOKEN_PREFIX.length())
+                : null;
     }
 
     public boolean validateToken(String token) {

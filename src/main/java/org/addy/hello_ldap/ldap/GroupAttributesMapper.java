@@ -13,7 +13,6 @@ import static org.addy.hello_ldap.ldap.LdapUtils.*;
 @Slf4j
 @Component
 public class GroupAttributesMapper implements AttributesMapper<Group> {
-
     @Override
     public Group mapFromAttributes(Attributes attributes) throws NamingException {
         dumpAttributes(attributes);
